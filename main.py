@@ -34,7 +34,9 @@ def output_lable(n):
 
 def manual_testing(news):
     if news == '':
-        st.error('Masukan Teks Berita')
+        st.error('masukkan berita')
+    elif news == 'type here':
+        st.error('masukkan berita')
     else:
         testing_news = {"text": [news]}
         new_def_test = pd.DataFrame(testing_news)
