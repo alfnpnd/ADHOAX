@@ -34,7 +34,7 @@ def output_lable(n):
 
 def manual_testing(news):
     if news == '':
-        st.error('masukkan berita')
+        st.error('Masukan Teks Berita')
     else:
         testing_news = {"text": [news]}
         new_def_test = pd.DataFrame(testing_news)
@@ -45,8 +45,8 @@ def manual_testing(news):
 
         return f"\n\nPrediksi : {output_lable(pred_DT[0])}"
 
-news_text = st.text_area('masukan teks','type here')
+news_text = st.text_area('Masukan Teks Berita','type here')
 news = (news_text)
 
-if st.button('Classify'):
+if st.button('Enter'):
     st.success(manual_testing(news))
