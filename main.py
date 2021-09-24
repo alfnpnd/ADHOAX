@@ -27,9 +27,9 @@ def wordopt(text):
 
 def output_lable(n):
     if n == 'HOAX':
-        return "Fake News"
+        return "BERITA HOAX!!!"
     elif n == 'FAKTA':
-        return "Not A Fake News"
+        return "BUKAN HOAX :)"
 
 
 def manual_testing(news):
@@ -43,7 +43,7 @@ def manual_testing(news):
         new_xv_test = load_vectorizer.transform(new_x_test)
         pred_DT = load_clf.predict(new_xv_test)
 
-        return f"\n\nDT Prediction : {output_lable(pred_DT[0])}"
+        return f"\n\nPrediksi : {output_lable(pred_DT[0])}"
 
 news_text = st.text_area('masukan teks','type here')
 news = (news_text)
