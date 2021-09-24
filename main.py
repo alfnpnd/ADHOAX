@@ -5,8 +5,8 @@ import re
 import string
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-load_clf = pickle.load(open('DTModel.pkl', 'rb'))
-load_vectorizer = pickle.load(open("vectorization.pkl", "rb"))
+load_clf = pickle.load(open('DTModel79.pkl', 'rb'))
+load_vectorizer = pickle.load(open("vectorizerNew.pkl", "rb"))
 
 
 st.title('ADHOAX')
