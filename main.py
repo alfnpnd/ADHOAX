@@ -5,6 +5,15 @@ import re
 import string
 from sklearn.feature_extraction.text import TfidfVectorizer
 
+hide_menu = """
+<style>
+#MainMenu {
+    visibility:hidden;
+}
+</style>
+"""
+st.markdown(hide_menu, unsafe_allow_html=True)
+
 load_clf = pickle.load(open('DTModel79.pkl', 'rb'))
 load_vectorizer = pickle.load(open("vectorizerNew.pkl", "rb"))
 
