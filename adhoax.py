@@ -14,8 +14,8 @@ hide_menu = """
 """
 st.markdown(hide_menu, unsafe_allow_html=True)
 
-load_clf = pickle.load(open('DTModel79.pkl', 'rb'))
-load_vectorizer = pickle.load(open("vectorizerNew.pkl", "rb"))
+load_clf = pickle.load(open('DTModel78.pkl', 'rb'))
+load_vectorizer = pickle.load(open("vectorizer.pkl", "rb"))
 
 
 st.title('ADHOAX')
