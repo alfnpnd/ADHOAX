@@ -1,1 +1,1 @@
-web: streamlit run --server.port $PORT main.py
+web: streamlit run --server.port $PORT adhoax.py
