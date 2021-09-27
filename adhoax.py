@@ -53,9 +53,8 @@ def manual_testing(news):
         new_x_test = new_def_test["text"]
         new_xv_test = load_vectorizer.transform(new_x_test)
         pred_DT = load_clf.predict(new_xv_test)
-        prediction_proba = load_clf.predict_proba(new_xv_test)
 
-        return f"\n\nPrediksi : {output_lable(pred_DT[0])}\n\n {st.write(prediction_proba)}"
+        return f"\n\nPrediksi : {output_lable(pred_DT[0])}"
 
 news_text = st.text_area('Masukan Teks Berita','type here')
 news = (news_text)
