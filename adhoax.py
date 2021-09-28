@@ -3,6 +3,10 @@ import pickle
 import pandas as pd
 import re
 import string
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 hide_menu = """
@@ -31,6 +35,14 @@ def wordopt(text):
     text = re.sub('\n', '', text)
     text = re.sub('\w*\d\w*', '', text)
     return text
+def text_preprocessing(text):
+    tokenizer_reg = nltk.tokenize.RegexpTokenizer(r'\w+')
+    
+    nopunc = wordopt(text)
+    tokenized_text = tokenizer_reg.tokenize(nopunc)
+    remove_stopwords = [w for w in tokenized_text if w not in stopwords.words('indonesian')]
+    combined_text = ' '.join(remove_stopwords)
+    return combined_text
 
 
 
@@ -49,7 +61,7 @@ def manual_testing(news):
     else:
         testing_news = {"text": [news]}
         new_def_test = pd.DataFrame(testing_news)
-        new_def_test["text"] = new_def_test["text"].apply(wordopt)
+        new_def_test["text"] = new_def_test["text"].apply(wordopt).apply(text_preprocessing)
         new_x_test = new_def_test["text"]
         new_xv_test = load_vectorizer.transform(new_x_test)
         pred_DT = load_clf.predict(new_xv_test)
