@@ -73,3 +73,8 @@ news = (news_text)
 
 if st.button('Enter'):
     st.success(manual_testing(news))
+    
+my_expander = st.expander(label='Panduan')
+with my_expander:
+    '1. masukkan teks berita yang akan di deteksi pada kolom. boleh judul, isi, maupun paragraf.'
+    '2. Tekan Enter lalu tunggu sampai hasil deteksi keluar'
