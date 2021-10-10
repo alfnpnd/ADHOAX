@@ -76,8 +76,7 @@ if st.button('Enter'):
     
 my_expander = st.expander(label='Panduan')
 with my_expander:
-    'Adhoax adalah sebuah aplikasi pendeteksi berita hoax yang dibuat menggunakan metode C4.5'
-    'terdiri dari 10rb dataset untuk memprediksi hasil deteksi dengan akurasi 75%'
+    'Adhoax adalah sebuah aplikasi pendeteksi berita hoax yang dibuat menggunakan metode C4.5 terdiri dari 10rb dataset untuk memprediksi hasil deteksi dengan akurasi 75%'
     'panduan'
     '1. masukkan teks berita yang akan di deteksi pada kolom. boleh judul, isi, maupun paragraf.'
     '2. Tekan Enter lalu tunggu sampai hasil deteksi keluar'
